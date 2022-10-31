@@ -12,9 +12,23 @@
 <body>
   <div class="container mt-3">
     <div class="card">
-      <div class="card-title px-3 py-3 fw-bold d-flex justify-content-between">
-         <span class="h3">Manage Employees</span>
-         <button class="btn btn-success btn-custom-success mr-0" id="submit">+ADD</button>
+      <div class="card-title px-3 py-3 fw-bold">
+         <p class="h3">Manage Employees</p>
+         <div>
+          <div class="d-flex justify-content-around pb-3">
+            <input type="text" class="input" placeholder="First Name" id="inputName">
+            <input type="text" class="input" placeholder="Surname" id="inputSurname">
+            <input type="text" class="input" placeholder="Username" id="inputUsername">
+           </div>
+           <div class="d-flex justify-content-around pb-3">
+            <input type="email" class="input" placeholder="Email" id="email">
+            <input type="text" class="input" placeholder="Address" id="inputAdress">
+            <input type="text" class="input" placeholder="Phone Number" id="inputPhoneNum">
+           </div>
+           <button class="btn btn-success btn-custom-success mr-0" id="submit">Get Data</button>
+           <button class="btn btn-success btn-custom-success mr-0" id="add">Add</button>
+  
+         </div>
         </div>
       <div class="card-body">
         <div class="input-group mb-3">
@@ -23,8 +37,8 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th scope="col" class="text-uppercase">Photo</th>
               <th scope="col" class="text-uppercase">Fullname</th>
+              <th scope="col" class="text-uppercase">Username</th>
               <th scope="col" class="text-uppercase">Email</th>
               <th scope="col" class="text-uppercase">address</th>
               <th scope="col" class="text-uppercase">phone</th>
@@ -32,6 +46,7 @@
             </tr>
           </thead>
           <tbody id="table-body">
+
           </tbody>
         </table>
       </div>

@@ -4,3 +4,8 @@
 .btn-yellow{
   color: rgb(173, 173, 1) !important;
 }
+.input{
+  width: 30%;
+  border: 1px solid silver;
+  border-radius: 5px;
+}
