@@ -4,6 +4,7 @@ let tableBody=document.getElementById("table-body")
 let add=document.getElementById("add")
 const btn=document.getElementById("getElements");
 const baseLink="https://jsonplaceholder.typicode.com"
+//For calling all APi data
 const getdata=()=>{
   const fetchdata=fetch(`${baseLink}/users`)
   .then((data)=>data.json())
@@ -27,11 +28,9 @@ const getdata=()=>{
 
   return fetchdata
 }
+// For calling API data 1 by 1
 // let count=1
-
-
 // const getdata=()=>{
-
 //   const fetchdata=fetch(`${BaseLink}/users/${count}`)
 //   .then((x)=>x.json())
 //   .then((data)=>{
@@ -48,14 +47,13 @@ const getdata=()=>{
 //           </td>
 //       </tr>
 //       `
-
 //   })
 //   count++
 //   return fetchdata
 // }
 // submit.addEventListener('click',getdata)
 getdata()
-
+//Inputs
 const inputName=document.getElementById("inputName")
 const inputSurname=document.getElementById("inputSurname")
 const inputEmail=document.getElementById("email")
@@ -64,7 +62,7 @@ const inputPhoneNum=document.getElementById("inputPhoneNum")
 const inputUsername=document.getElementById("inputUsername")
 const invisableDiv=document.getElementsByClassName("d-none")
 const edit=document.getElementById("edit")
-
+//Edit button
 tableBody.addEventListener('click',e=>{
   e.target.id=="edit"
   if (!CheckEmpty()) {
@@ -87,7 +85,7 @@ tableBody.addEventListener('click',e=>{
   }
 })
 
-
+//Checking input values
 function CheckEmpty() {
   if (inputName.value.trim().length==0 && inputSurname.value.trim().length==0 &&
   inputUsername.value.trim().length==0 && inputEmail.value.trim().length==0 &&
@@ -97,7 +95,7 @@ function CheckEmpty() {
   return true
 }
 
-
+//For adding custom data to the table
 add.addEventListener('click',()=>{
   if (!CheckEmpty()) {
     alert("Edit etmek ucun ilk once inputlari doldurun!!!")
@@ -118,7 +116,7 @@ add.addEventListener('click',()=>{
     ZeroOut()
   }
 })
-
+//For deleting values from input after use
 function ZeroOut() {
   inputName.value=""
   inputSurname.value=""
